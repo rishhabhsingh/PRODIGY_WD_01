@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza House</title>
+  <style>
+    /* Basic styles for the navigation menu */
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: url('bghjk2.jpg!w700wp') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #ff5733, #ff8d1a);
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.5s ease, transform 0.3s ease;
+    }
+
+    .nav.scrolled {
+      background: linear-gradient(90deg, #c70039, #900c3f);
+      transform: translateY(-5px);
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.4s ease;
+      color: white;
+    }
+
+    .nav a:hover {
+      color: #ff8d1a;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+
+    /* Adding some content for scrolling */
+    .content {
+      padding: 100px 20px;
+    }
+
+    .content section {
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .content section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero h1 span {
+      color: red;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .carousel {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      overflow: hidden;
+      margin-top: 30px;
+    }
+
+    .carousel img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(0.9);
+      transition: transform 0.6s ease;
+    }
+
+    .carousel img:hover {
+      transform: scale(1);
+    }
+
+    .reviews {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .review {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .menu-images img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(0.9);
+      transition: transform 0.6s ease;
+    }
+
+    .menu-images img:hover {
+      transform: scale(1);
+    }
+
+    .contact {
+      text-align: left;
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .contact-placeholder {
+      height: 150px;
+      border: 2px dashed white;
+      margin: 20px auto;
+      max-width: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="content">
+    <section id="home">
+      <div class="hero">
+        <h1>The <span>Pizza</span> House</h1>
+      </div>
+
+      <div class="carousel">
+        <img src="pizza1.jpg" alt="Pizza 1">
+        <img src="pizza2.jpg" alt="Pizza 2">
+        <img src="pizza3.jpg" alt="Pizza 3">
+      </div>
+
+      <div class="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review">"The best pizza I’ve ever had! Highly recommend trying it out." - Jane Doe</div>
+        <div class="review">"Absolutely delicious and worth every penny! Great ambiance." - John Smith</div>
+        <div class="review">"A fantastic experience, highly recommend! Will visit again soon." - Alex Lee</div>
+        <div class="review">"Wonderful service and mouth-watering pizzas!" - Emily Clark</div>
+        <div class="review">"The crust was perfect, and the toppings were fresh!" - Michael Brown</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h1>About Us</h1>
+      <p>Welcome to The Pizza House, where passion meets perfection. Our journey began with a love for creating the finest pizzas, and today,</p>
+      <p>we take pride in serving our community with flavors that tantalize taste buds.</p>
+      <p>At The Pizza House, every slice tells a story. From using the freshest ingredients to crafting dough that’s baked to perfection, our commitment </p>
+      <p>to quality never wavers. Whether you’re here for a classic Margherita or a gourmet masterpiece, we ensure every bite is unforgettable.</p>
+      <p>We’re more than just a pizzeria; we’re a place where families gather, friends celebrate, and memories are made. Join us for an experience that goes beyond </p>
+      <p>the ordinary, where great food and warm hospitality await.</p>
+    </section>
+
+    <section id="menu">
+      <h1>Our Menu</h1>
+      <p>Explore our variety of pizzas, from classic Margherita to gourmet creations.</p>
+      <div class="menu-images">
+        <img src="Screenshot 2025-01-19 150349.png" alt="A selection of pizzas from our menu">
+        <img src="Screenshot 2025-01-19 150409.png" alt="Gourmet pizza with toppings">
+        <img src="Screenshot 2025-01-19 150452.png" alt="Veggie pizza">
+        <img src="Screenshot 2025-01-19 150502.png" alt="Meat lovers pizza">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>Contact Us</h1>
+      <p>Have questions or want to make a reservation? Reach out to us!</p>
+      <div class="contact-placeholder">Address of our pizzeria:-1234 Pizza Street, Foodie Town, FL 56789</div>
+      <div class="contact-placeholder">Number to Order:-32325658989</div>
+    </section>
+  </div>
+
+  <script>
+    // JavaScript to handle scroll and hover effects
+    const navbar = document.getElementById('navbar');
+    const sections = document.querySelectorAll('.content section');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // Reveal sections on scroll
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
