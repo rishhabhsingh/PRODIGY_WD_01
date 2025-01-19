@@ -14,3 +14,6 @@ This project is a responsive landing page featuring an **interactive navigation 
 - **HTML** for structuring the page.  
 - **CSS** for styling and responsive design.  
 - **JavaScript** for interactivity and dynamic style changes.  
+
+## 📸 Preview  
+- **attached video file**
